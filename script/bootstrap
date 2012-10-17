@@ -28,4 +28,4 @@ bundle install --binstubs --local --path vendor --quiet
 echo ""
 echo "Ok, setup complete. Run"
 echo "  foreman start"
-echo "to start the application."
+echo "to start the application. Browse to http://localhost:8000/ to view."
