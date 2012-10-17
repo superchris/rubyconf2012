@@ -52,18 +52,18 @@ body {
 
 /* line 39, ../../../sass/theme/gaslight/gaslight.sass */
 #logo {
-  position: absolute;
-  right: 1em;
-  top: 1em;
+  margin: 0 auto;
 }
-/* line 43, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 41, ../../../sass/theme/gaslight/gaslight.sass */
 #logo img {
   max-width: 100px;
-  opacity: 0.5;
-  -webkit-filter: grayscale(0.6);
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
-/* line 52, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 50, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   line-height: 0.9em;
   letter-spacing: 0.02em;
