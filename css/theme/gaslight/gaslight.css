@@ -163,12 +163,13 @@ body {
 /* line 107, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .slides > section {
   padding: 5%;
+  margin-left: -55%;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 0px 10px 30px #bbbbbb;
   -moz-box-shadow: 0px 10px 30px #bbbbbb;
   box-shadow: 0px 10px 30px #bbbbbb;
 }
-/* line 111, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 112, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .slides > section > section {
   padding: 0;
   width: 90%;
@@ -176,7 +177,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 115, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 116, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .slides > section code {
   padding-left: 0.5em;
 }
