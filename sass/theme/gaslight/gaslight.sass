@@ -1,4 +1,5 @@
 @import compass/css3
+@import gaslight-color
 
 @font-face
   font-family: 'League Gothic'
@@ -16,6 +17,11 @@ body
   background: url(images/background.jpg)
   @include background-size(cover)
 
+::selection
+  background: $gaslight-brand2
+  color: #fff
+  @include text-shadow(none)
+
 #bars
   width: 100%
   position: absolute
@@ -30,11 +36,11 @@ body
     height: 100%
     list-style: none
     &.brand1
-      background: #d63f31
+      background: $gaslight-brand1
     &.brand2
-      background: #60b6e4
+      background: $gaslight-brand2
     &.brand3
-      background: #ebd018
+      background: $gaslight-brand3
 
 #logo
   margin: 0 auto
