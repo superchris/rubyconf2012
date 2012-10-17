@@ -1,6 +1,7 @@
 # Gaslight's reveal.js fork
 
-Featuring an awesome Gaslight theme powered by [Sass], [Compass] and [Guard].
+Featuring an awesome Gaslight theme powered by [Sass](http://sass-lang.com/), 
+[Compass](http://compass-style.org) and [Guard](https://github.com/guard/guard).
 Use this as a starting point for your next presentation. Might not make much
 sense unless you're a Gaslighter or a huge fan, though.
 
@@ -14,7 +15,8 @@ Want to make changes to the Sass? Just follow these steps:
 1. `foreman start`
 
 That's it! You're ready to edit some Sass. It'll compile in to the css/ dir so
-you can just reload the page to see your changes.
+you can just reload the page to see your changes. Browse to http://localhost:8000/ 
+and bask in the glory.
 
 ## Contributing
 
