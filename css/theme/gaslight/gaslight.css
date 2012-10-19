@@ -22,7 +22,6 @@ body {
   font-family: "DINWeb", "League Gothic", Impact, sans-serif;
   font-size: 36px;
   font-weight: 200;
-  letter-spacing: -0.02em;
   background: url(images/background.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -30,14 +29,14 @@ body {
   background-size: cover;
 }
 
-/* line 28, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 27, ../../../sass/theme/gaslight/gaslight.sass */
 ::selection {
   background: #60b6e4;
   color: white;
   text-shadow: none;
 }
 
-/* line 33, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 32, ../../../sass/theme/gaslight/gaslight.sass */
 #bars {
   width: 100%;
   position: absolute;
@@ -47,31 +46,31 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 41, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 40, ../../../sass/theme/gaslight/gaslight.sass */
 #bars li {
   width: 33.333%;
   float: left;
   height: 100%;
   list-style: none;
 }
-/* line 46, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 45, ../../../sass/theme/gaslight/gaslight.sass */
 #bars li.brand1 {
   background: #d63f31;
 }
-/* line 48, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 47, ../../../sass/theme/gaslight/gaslight.sass */
 #bars li.brand2 {
   background: #60b6e4;
 }
-/* line 50, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 49, ../../../sass/theme/gaslight/gaslight.sass */
 #bars li.brand3 {
   background: #ebd018;
 }
 
-/* line 53, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 52, ../../../sass/theme/gaslight/gaslight.sass */
 #logo {
   margin: 0 auto;
 }
-/* line 55, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 54, ../../../sass/theme/gaslight/gaslight.sass */
 #logo img {
   max-width: 100px;
   border: none;
@@ -80,46 +79,41 @@ body {
   box-shadow: none;
 }
 
-/* line 64, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 63, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   line-height: 0.9em;
-  letter-spacing: 0.02em;
   margin: 0 0 20px 0;
   color: #eeeeee;
   color: rgba(30, 30, 30, 0.85);
 }
-/* line 70, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 68, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal h1 {
   font-family: "ff-din-condensed-web", "DINWeb", "League Gothic", Impact, sans-serif;
   font-size: 3em;
   letter-spacing: -0.03em;
 }
-/* line 76, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 74, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal h1, .reveal h2 {
   font-family: "DINWeb", "League Gothic", Impact, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
-/* line 80, ../../../sass/theme/gaslight/gaslight.sass */
-.reveal h2 {
-  letter-spacing: -0.5px;
-}
-/* line 82, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 79, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal h3 {
   color: rgba(55, 55, 55, 0.9);
   font-size: 140%;
 }
-/* line 85, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 82, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal h4 {
   color: rgba(55, 55, 55, 0.9);
   font-size: 80%;
 }
-/* line 88, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 85, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  letter-spacing: -2px;
   line-height: 1.1em;
 }
-/* line 91, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 87, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal a:not(.image) {
   color: #60b6e4;
   text-decoration: none;
@@ -128,19 +122,19 @@ body {
   -o-transition: color 0.15s ease;
   transition: color 0.15s ease;
 }
-/* line 95, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 91, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal a:not(.image):hover {
   color: #60b6e4;
   text-shadow: none;
   border: none;
   border-radius: 2px;
 }
-/* line 100, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 96, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .roll span:after {
   color: white;
   background-color: #60b6e4;
 }
-/* line 103, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 99, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal section img {
   margin: 30px 0 0 0;
   background: rgba(255, 255, 255, 0.12);
@@ -153,7 +147,7 @@ body {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-/* line 109, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 105, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #13daec;
@@ -161,20 +155,20 @@ body {
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
-/* line 113, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 109, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .controls a {
   color: white;
 }
-/* line 115, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 111, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .controls a.enabled {
   color: #71e9f4;
   text-shadow: 0px 0px 2px rgba(144, 207, 213, 0.3);
 }
-/* line 118, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 114, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 120, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 116, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .progress span {
   background: #13daec;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -182,7 +176,7 @@ body {
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 }
-/* line 124, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 120, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .slides > section {
   padding: 7% 5%;
   margin-left: -55%;
@@ -191,7 +185,7 @@ body {
   -moz-box-shadow: 0px 10px 30px #bbbbbb;
   box-shadow: 0px 10px 30px #bbbbbb;
 }
-/* line 129, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 125, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .slides > section > section {
   padding: 0;
   width: 90%;
@@ -199,7 +193,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 133, ../../../sass/theme/gaslight/gaslight.sass */
+/* line 129, ../../../sass/theme/gaslight/gaslight.sass */
 .reveal .slides > section code {
   padding-left: 0.5em;
 }
