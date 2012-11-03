@@ -1,0 +1,17 @@
+type,cgf_efficiency,gwh_efficiency,hp_efficiency,last_replaced,constructed,result
+Electric resistance,,,,,,not recommended
+Gas central furnace,More than 78% AFUE,,,,,not recommended
+Gas central furnace,78% AFUE or lower,,,,,recommended
+Gas central furnace,Don't Know,,,>= 18 yrs ago,,recommended
+Gas central furnace,Don't Know,,,< 18 yrs ago,,not recommended
+Electric central furnace,,,,,,not recommended
+Gas wall heater,,More that 65% AFUE,,,,not recommended
+Gas wall heater,,65% AFUE or lower,,,,not recommended
+Gas wall heater,,Don't Know,,>= 18 yrs ago,,recommended
+Gas wall heater,,Don't Know,,< 18 yrs ago,,not recommended
+Heat pump,,,More than 7.7 HSPF,,,not recommended
+Heat pump,,,7.7 HSPF or lower,,,not recommended
+Heat pump,,,Don't Know,>= 15 yrs ago,,recommended
+Heat pump,,,Don't Know,< 15 yrs ago,,not recommended
+Don't Know,,,,,<= 1978,recommended
+Don't Know,,,,,>= 1979,not recommended

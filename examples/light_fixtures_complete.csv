@@ -1,0 +1,9 @@
+lighting_type,last_replaced,result
+Pin-based fluorescent,>= 10 yrs ago,not recommended
+Pin-based fluorescent,< 10 yrs ago,not recommended
+Screw-in incandescent,< 10 yrs ago,recommended
+Screw-in CFL,>= 10 yrs ago,recommended
+Screw-in CFL,< 10 yrs ago,recommended
+Screw-in incandescent,>= 10 yrs ago,recommended
+Don't Know,>= 10 yrs ago,recommended
+Don't Know,< 10 yrs ago,not recommended

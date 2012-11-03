@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>THIS IS THE TITLE OF THE PRESENTATION. YOU SHOULD CHANGE IT.</title>
+    <title>Machine Learning for...</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -41,241 +41,795 @@
       <div class="slides">
 
         <section>
-          <h1>Reveal.js</h1>
-          <h3>HTML Presentations Made Easy</h3>
-          <h4>Gaslight Theme</h4>
+          <h2>Machine Learning</h2>
+          <h3>for &lt;insert cliche here&gt;</h3>
+          <h4>Chris Nelson</h4>
 
           <div id="logo">
             <img src="css/theme/gaslight/images/logo.png" />
           </div>
         </section>
-
         <section>
-          <h2>Heads Up</h2>
-          <p>
-            reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-            support for CSS 3D transforms to see it in its full glory.
-          </p>
-          <p>
-            <i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-          </p>
-
-          <aside class="notes">
-            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-          </aside>
+          <h2 class="center">Who am I?</h2>
+        </section>
+        <section>
+          <H2 class="center">What's Machine Learning?</H2>
         </section>
 
         <section>
-          <h2>Point of View</h2>
-          <p>
-            Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-          </p>
+          <h2 class="center">Depth not breadth</h2>
+
+        </section>
+        <section>
+          <p class='there_will center'>There will be Math</p>
         </section>
 
         <section>
-          <h2>rvl.io</h2>
-          <p>
-            If you don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
-          </p>
-        </section>
-
-        <section>
-          <h2>Works in Mobile Safari</h2>
-          <p>
-            Try it out! You can swipe through the slides and pinch your way to the overview.
-          </p>
-        </section>
-
-        <section>
-          <h2>Marvelous Unordered List</h2>
+          <h2>The Project</h2>
           <ul>
-            <li>No order here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-            <li>Or here</li>
+            <li>Recommending home improvements</li>
+            <li>Bunches of rules</li>
+            <li>Expressed as cuke tables</li>
+          </ul>
+        </section>
+        <section>
+          <h2>A simple rule</h2>
+          <table class="rule">
+            <tr>
+              <th>Has pool?</th>
+              <th>Has efficient pump?</th>
+              <th>Upgrade recommended</th>
+            <tr>
+              <td>No</td>
+              <td>No</td>
+              <td>No</td>
+            <tr>
+              <td>Yes</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>Turns into simple code</h2>
+          <pre><code class="ruby">
+class PoolPumpRule
+  def evaluate(property)
+    property.has_pool? &amp;&amp; property.has_efficient_pool_pump?
+  end
+end
+          </code></pre>
+        </section>
+        <section>
+          <H2>More interesting example</H2>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>Turns into more code</h2>
+          <pre><code class="ruby">
+class ReplaceLightingRule
+  def evaluate(property)
+    if property.lighting_type == "Screw-in incandescent" || property.lighting_type == "Screw-in CFL"
+      true
+    elsif property.lighting_type == "Pin-based fluorescent"
+      false
+    elsif property.lighting_type == "Don't Know"
+      property.lighting_installed_at < 10.years.ago
+    end
+  end
+end
+          </code></pre>
+
+        </section>
+        <section>
+          <h2>Woot!</h2>
+          <h3>2 down, 30-something to go!</h3>
+          <h4>With unit tests</h4>
+          <h5>By the end of the week</h5>
+          <p>Le sigh..</p>
+        </section>
+        <section>
+          <img src="james_wizard.jpeg" />
+        </section>
+        <section>
+          <h2 class="center">Decision trees</h2>
+        </section>
+        <section>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          </table>
+        </section>
+        <section>
+          <embed src="tree.svg" type="image/svg+xml" />
+        </section>
+        <section>
+          <embed src="perverse_tree.svg" type="image/svg+xml" />
+        </section>
+        <section>
+          <h2>ID3</h2>
+          <ul>
+            <li>Iterative Dichotomiser</li>
+            <li>Ross Quinlan</li>
+            <li>Entropy</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Entropy</h2>
+          <img src="entropy.png" width="500" />
+          <p>n = number of possible values for the given attribute</p>
+          <p>fs(j) = frequency that the jth value occurs</p>
+        </section>
+        <section>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          </table>
+        </section>
+
+        <section>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>>= 10 yrs ago</td>
+          <td class="red">not recommended</td>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>< 10 yrs ago</td>
+          <td class="red">not recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>< 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>>= 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>< 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>>= 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>>= 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>< 10 yrs ago</td>
+          <td class="red">not recommended</td>
+          </tr>
+          </table>
+          <p>-(5/8 * log2(5/8) + 3/8 * log2(3/8)) = 0.954434002924965</p>
+        </section>
+        <section>
+          <h2>Gain</h2>
+          <p>What is the effect on entropy if branch on a given attribute?</p>
+          <img src="gain.png" width="500"/>
+          <ul>
+            <li>m = number of values for attribute</li>
+            <li>fs(Ai) = frequency that the ith value occurs</li>
+            <li>E(SAi) = entropy of the results for rows where an attribute has a given value</li>
+          </ul>
+        </section>
+        <section>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td class="blue">Pin-based flourescent</td>
+          <td>>= 10 yrs ago</td>
+          <td class="red">not recommended</td>
+          </tr>
+          <tr>
+          <td class="blue">Pin-based flourescent</td>
+          <td>< 10 yrs ago</td>
+          <td class="red">not recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>< 10 yrs ago</td>
+          <td >recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          </table>
+          <p>Entropy(type=Pin based fluorescent) = </p>
+          <p>-(1 * log2(1) + 0 * log2(0)) = 0</p>
+
+        </section>
+        <section>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td class="blue">Screw-in incandescent</td>
+          <td>< 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td class="blue">Screw-in incandescent</td>
+          <td>>= 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          </table>
+          <p>Entropy(type=Screw-in incandescent) = 0</p>
+
+        </section>
+
+        <section>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>< 10 yrs ago</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>< 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>>= 10 yrs ago</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td class="blue">Don't Know</td>
+          <td>>= 10 yrs ago</td>
+          <td class="green">recommended</td>
+          </tr>
+          <tr>
+          <td class="blue">Don't Know</td>
+          <td>< 10 yrs ago</td>
+          <td class="red">not recommended</td>
+          </tr>
+          </table>
+          <p>Entropy(type=Don't Know)</p>
+          <p>-(0.5 * log2(0.5) + 0.5 * log2(0.5)) = 1</p>
+        </section>
+        <section>
+          <h2>Calculating Gain</h2>
+          <p>Proportional entropy partioned by lighting type:</p>
+          <p>1/4(0) + 1/4(0) + 1/4(0) + 1/4(0.25)</p>
+          <p>Gain(lighting type) = 0.95 - 0.25 = 0.70</p>
+        </section>
+        <section>
+          <h3 class="center">Gain(installed on) = 0.95 - 0.90 = 0.05</h3>
+        </section>
+        <section>
+          <h2 class="center">Decision trees in ruby</h2>
+        </section>
+        <section>
+          <h2>ai4r</h2>
+          <ul>
+            <li>Sergio Fierens</li>
+            <li>Lots of algorithms</li>
+            <ul>
+              <li>Neural networks</li>
+              <li>Genetic Alogorithms</li>
+              <li>Classifiers:</li>
+              <ul>
+                <li>ID3</li>
+              </ul>
+            </ul>
+            <li>Outputs the tree as code</li>
+          </ul>
+        </section>
+        <section><H2 class="center">Demo time</H2></section>
+        <section>
+          <H2 class="center">That's cool, but...</H2>
+        </section>
+        <section>
+          <table><tr>
+          <th>type</th>
+          <th>last_replaced</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>1999</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Pin-based flourescent</td>
+          <td>2005</td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>2009</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>1997</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in CFL</td>
+          <td>2010</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Screw-in incandescent</td>
+          <td>1990</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>1992</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td>2007</td>
+          <td>not recommended</td>
+          </tr>
+          </table>
+        </section>
+        <section>
+          <h2>Entropy Bias</h2>
+          <ul>
+            <li>Entropy(S, installed_at = 1990) = 0</li>
+            <li>Gain = Entropy(S) - 0 = 0.95 - 0 = 0.95</li>
+            <li>It will always pick installed_at!</li>
+            <li>Even though it's not really predictive :(</li>
           </ul>
         </section>
 
         <section>
-          <h2>Fantastic Ordered List</h2>
-          <ol>
-            <li>One is smaller than...</li>
-            <li>Two is smaller than...</li>
-            <li>Three!</li>
-          </ol>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Markdown support
-            
-            For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-                <section data-markdown>
-                  ## Markdown support
-
-                  For those of you who like that sort of thing.
-                  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-                </section>
-          </script>
-        </section>
-
-        <section id="transitions">
-          <h2>Transition Styles</h2>
-          <p>
-            You can select from different transitions, like: <br>
-            <a href="?transition=cube#/transitions">Cube</a> -
-            <a href="?transition=page#/transitions">Page</a> -
-            <a href="?transition=concave#/transitions">Concave</a> -
-            <a href="?transition=zoom#/transitions">Zoom</a> -
-            <a href="?transition=linear#/transitions">Linear</a> -
-            <a href="?transition=none#/transitions">None</a> -
-            <a href="?#/transitions">Default</a>
-          </p>
-        </section>
-
-        <section id="themes">
-          <h2>Themes</h2>
-          <p>
-            Reveal.js comes with a few themes built in: <br>
-            <a href="?theme=sky#/themes">Sky</a> -
-            <a href="?theme=beige#/themes">Beige</a> -
-            <a href="?theme=simple#/themes">Simple</a> -
-            <a href="?theme=serif#/themes">Serif</a> -
-            <a href="?#/themes">Default</a>
-          </p>
-          <p>
-            <small>
-              * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-            </small>
-          </p>
-        </section>
-
-        <section>
-          <section data-state="alert">
-            <h2>Global State</h2>
-            <p>
-              Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-              will be added as a class to the document element when the slide is open. This lets you
-              apply broader style changes, like switching the background.
-            </p>
-            <a href="#/7/1" class="image">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-            </a>
-          </section>
-          <section data-state="blackout">
-            <h2>"blackout"</h2>
-            <a href="#/7/2" class="image">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-            </a>
-          </section>
-          <section data-state="soothe">
-            <h2>"soothe"</h2>
-            <a href="#/7/0" class="image">
-              <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-            </a>
-          </section>
-        </section>
-
-        <section data-state="customevent">
-          <h2>Custom Events</h2>
-          <p>
-            Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-          </p>
-          <pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-    console.log( '"customevent" has fired' );
-});
-            </code></pre>
-        </section>
-
-        <section>
-          <h2>Clever Quotes</h2>
-          <p>
-            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-              The nice thing about standards is that there are so many to choose from</q> and block:
-          </p>
-          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-            For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-          </blockquote>
-        </section>
-
-        <section>
-          <h2>Pretty Code</h2>
-          <pre><code contenteditable>function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}</code></pre>
-          <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-        </section>
-
-        <section>
-          <h2>Intergalactic Interconnections</h2>
-          <p>
-            You can link between slides internally,
-            <a href="#/2/3">like this</a>.
-          </p>
-        </section>
-
-        <section>
-          <h2>Fragmented Views</h2>
-          <p>Hit the next arrow...</p>
-          <p class="fragment">... to step through ...</p>
-          <ol>
-            <li class="fragment"><code>any type</code></li>
-            <li class="fragment"><em>of view</em></li>
-            <li class="fragment"><strong>fragments</strong></li>
-          </ol>
-        </section>
-
-        <section>
-          <h2>Spectacular image!</h2>
-          <a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-            <img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-          </a>
-        </section>
-
-        <section>
-          <h2>Export to PDF</h2>
-          <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-          <iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-          <script>
-            document.getElementById('slideshare').attributeName = 'allowfullscreen';
-          </script>
-        </section>
-
-        <section>
-          <h2>Take a Moment</h2>
-          <p>
-            Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take disctracting slides off the screen
-            during a presentation.
-          </p>
-        </section>
-
-        <section>
-          <h2>Stellar Links</h2>
+          <h2>Handling continuous attributes</h2>
           <ul>
-            <li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-            <li><a href="http://hakim.se/projects/reveal-js">Leave feedback on my site</a></li>
-            <li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+            <li>What if we "discretize" them?</li>
+            <li>Need to figure out where to split</li>
+            <ul>
+              <li>Sort all the uniq values</li>
+              <li>Build a list of all the halfway points as candidates</li>
+              <li>Measure the gain from each</li>
+              <li>Split point with highest gain wins</li>
+            </ul>
+          </ul>
+
+        </section>
+        <section>
+          <h2>C 4.5</h2>
+          <ul>
+            <li>Later algorithm by Quinlan</li>
+            <li>Handles continuous attributes</li>
+            <li>Among other things</li>
           </ul>
         </section>
-
         <section>
-          <h1>THE END</h1>
-          <h3>BY Hakim El Hattab / hakim.se</h3>
+          <h2>decisiontree</h2>
+          <ul>
+            <li>Ilya Grigorik</li>
+            <li>Outputs tree graphically</li>
+            <li>Deals with continuous attributes correctly</li>
+            <li>adds Array#entropy</li>
+          </ul>
         </section>
-
+        <section>
+          <H2 class="center">Let's see it</H2>
+        </section>
+        <section>
+          <H2 class="center">Rules or examples?</H2>
+        </section>
+      <section>
+          <table class="small"><tr>
+          <th>type</th>
+          <th>cgf_efficiency</th>
+          <th>gwh_efficiency</th>
+          <th>hp_efficiency</th>
+          <th>last_replaced</th>
+          <th>constructed</th>
+          <th>result</th>
+          </tr>
+          <tr>
+          <td>Electric resistance</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Gas central furnace</td>
+          <td>More than 78% AFUE</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Gas central furnace</td>
+          <td>78% AFUE or lower</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Gas central furnace</td>
+          <td>Don't Know</td>
+          <td></td>
+          <td></td>
+          <td>>= 18 yrs ago</td>
+          <td></td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Gas central furnace</td>
+          <td>Don't Know</td>
+          <td></td>
+          <td></td>
+          <td>< 18 yrs ago</td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Electric central furnace</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Gas wall heater</td>
+          <td></td>
+          <td>More that 65% AFUE</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Gas wall heater</td>
+          <td></td>
+          <td>65% AFUE or lower</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Gas wall heater</td>
+          <td></td>
+          <td>Don't Know</td>
+          <td></td>
+          <td>>= 18 yrs ago</td>
+          <td></td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Gas wall heater</td>
+          <td></td>
+          <td>Don't Know</td>
+          <td></td>
+          <td>< 18 yrs ago</td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Heat pump</td>
+          <td></td>
+          <td></td>
+          <td>More than 7.7 HSPF</td>
+          <td></td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Heat pump</td>
+          <td></td>
+          <td></td>
+          <td>7.7 HSPF or lower</td>
+          <td></td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Heat pump</td>
+          <td></td>
+          <td></td>
+          <td>Don't Know</td>
+          <td>>= 15 yrs ago</td>
+          <td></td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Heat pump</td>
+          <td></td>
+          <td></td>
+          <td>Don't Know</td>
+          <td>< 15 yrs ago</td>
+          <td></td>
+          <td>not recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><= 1978</td>
+          <td>recommended</td>
+          </tr>
+          <tr>
+          <td>Don't Know</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>>= 1979</td>
+          <td>not recommended</td>
+          </tr>
+          </table>
+        </section>
+        <section>
+          <H2>Decision Table</H2>
+          <UL>
+            <li>decision_table</li>
+            <li>very simple gem by your humble presenter</li>
+            <li>for when you have rules expressed in tabular format</li>
+            <UL>
+              <li>You already know what order to do the comparisons</li>
+              <li>Simple brute-force approach</li>
+            </UL>
+          </UL>
+        </section>
+        <section>
+          <H2 class="center">decision_table example</H2>
+        </section>
+        <section>
+          <h2>Lessons learned</h2>
+          <ul>
+            <li>Don't write the code yourself!</li>
+            <UL>
+              <li>still need test cases tho</li>
+            </UL>
+            <li>Understand your algorithm</li>
+            <li>Simplest thing than can possibly work</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Resources</h3>
+          <ul>
+            <li>igvita.com</li>
+            <li>decisiontrees.net</li>
+            <li>http://onlamp.com/pub/a/python/2006/02/09/ai_decision_trees.html</li>
+          </ul>
+        </section>
       </div>
     </div>
 

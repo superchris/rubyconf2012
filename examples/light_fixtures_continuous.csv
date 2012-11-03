@@ -1,0 +1,9 @@
+lighting_type,last_replaced,result
+Pin-based fluorescent,2000,not recommended
+Pin-based fluorescent,2005,not recommended
+Screw-in incandescent,2010,recommended
+Screw-in CFL,1990,recommended
+Screw-in CFL,2008,recommended
+Screw-in incandescent,2002,recommended
+Don't Know,1998,recommended
+Don't Know,2009,not recommended

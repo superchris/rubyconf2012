@@ -1,0 +1,26 @@
+    | planned_in_scope | type                     | cgf_efficiency    | gwh_efficiency      | hp_efficiency       | hb_efficiency      | last_replaced  | constructed     | result          |
+    | is               |                          |                   |                     |                     |                    |                |                 | recommended     |
+    | is not           | Electric resistance      |                   |                     |                     |                    |                |                 | not recommended |
+    | is not           | Gas central furnace      | More than 78% AFUE|                     |                     |                    |                |                 | not recommended |
+    | is not           | Gas central furnace      | 78% AFUE or lower |                     |                     |                    |                |                 | recommended     |
+    | is not           | Gas central furnace      | Don't Know        |                     |                     |                    | >= 18 yrs ago  |                 | recommended     |
+    | is not           | Gas central furnace      | Don't Know        |                     |                     |                    | < 18 yrs ago   |                 | not recommended |
+    | is not           | Electric central furnace |                   |                     |                     |                    |                |                 | not recommended |
+    | is not           | Gas wall heater          |                   | More that 65% AFUE  |                     |                    |                |                 | not recommended |
+    | is not           | Gas wall heater          |                   | 65% AFUE or lower   |                     |                    |                |                 | not recommended |
+    | is not           | Gas wall heater          |                   | Don't Know          |                     |                    | >= 18 yrs ago  |                 | recommended     |
+    | is not           | Gas wall heater          |                   | Don't Know          |                     |                    | < 18 yrs ago   |                 | not recommended |
+    | is not           | Heat pump                |                   |                     | More than 7.7 HSPF  |                    |                |                 | not recommended |
+    | is not           | Heat pump                |                   |                     | 7.7 HSPF or lower   |                    |                |                 | not recommended |
+    | is not           | Heat pump                |                   |                     | Don't Know          |                    | >= 15 yrs ago  |                 | recommended     |
+    | is not           | Heat pump                |                   |                     | Don't Know          |                    | < 15 yrs ago   |                 | not recommended |
+    | is not           | Hydronic                 |                   |                     |                     | Higher than 78%    |                |                 | not recommended |
+    | is not           | Hydronic                 |                   |                     |                     | 78% or lower       |                |                 | recommended     |
+    | is not           | Hydronic                 |                   |                     |                     | Don't Know         | >= 30 yrs ago  |                 | recommended     |
+    | is not           | Hydronic                 |                   |                     |                     | Don't Know         | < 30 yrs ago   |                 | not recommended |
+    | is not           | Combined hydronic        |                   |                     |                     | Higher than 78%    |                |                 | not recommended |
+    | is not           | Combined hydronic        |                   |                     |                     | 78% or lower       |                |                 | recommended     |
+    | is not           | Combined hydronic        |                   |                     |                     | Don't Know         | >= 30 yrs ago  |                 | recommended     |
+    | is not           | Combined hydronic        |                   |                     |                     | Don't Know         | < 30 yrs ago   |                 | not recommended |
+    | is not           | Don't Know               |                   |                     |                     |                    |                | <= 1978         | recommended     |
+    | is not           | Don't Know               |                   |                     |                     |                    |                | >= 1979         | not recommended |

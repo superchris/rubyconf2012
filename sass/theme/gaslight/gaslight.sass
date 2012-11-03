@@ -16,6 +16,10 @@
   font-family: DINWeb
   src: url("fonts/DINWeb.woff") format("woff")
 
+@font-face
+  font-family: KrautTypeAFuck
+  src: url("fonts/kraut_type_a_fuck.ttf") format("truetype")
+
 body
   color: rgba(30, 30, 30, 0.85)
   font-family: 'DINWeb', 'League Gothic', Impact, sans-serif
@@ -28,6 +32,18 @@ body
   background: $gaslight-brand2
   color: #fff
   @include text-shadow(none)
+
+p.there_will
+  font-family: "KrautTypeAFuck"
+  font-size: 50px
+
+td.red
+  background-color: $gaslight-brand1
+td.green
+  background-color: #1E9856
+td.blue
+  background-color: $gaslight-brand2
+
 
 #bars
   width: 100%
@@ -76,6 +92,8 @@ body
     font-weight: bold
     text-transform: uppercase
     letter-spacing: -1px
+  h2
+    font-size: 140%
   h3
     color: rgba(55, 55, 55, 0.9)
     font-size: 140%
@@ -128,4 +146,34 @@ body
       @include box-sizing(border-box)
     code
       padding-left: .5em
+
+  table
+    width: 100%
+    margin-bottom: 40px
+    border-collapse: collapse
+    border-spacing: 0
+    th, td
+      font-size: 24px
+      padding: 8px
+      line-height: 20px
+      text-align: left
+      vertical-align: top
+      border-top: 1px solid #DDD
+    th
+      font-weight: bold
+      vertical-align: bottom
+      border-top: 0
+
+  table.small
+    th, td
+      font-size: 15px
+      line-height: 15px
+      padding: 5px
+
+
+  h2.first_slide
+    margin-top: 150px
+
+  p.center, h2.center, h3.center
+    margin-top: 280px
 
